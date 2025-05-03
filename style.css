@@ -1,0 +1,129 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Latar belakang dan font */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f6e0fc, #f3cff1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container umum */
+  .container {
+    width: 90%;
+    max-width: 600px;
+    background: #9e18c077;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Input teks dan password */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.2s;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #4e73df;
+    outline: none;
+  }
+  
+  /* Tombol umum */
+  button {
+    padding: 12px 24px;
+    background: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #375ab7;
+  }
+  
+  /* Navigasi tombol */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    gap: 10px;
+  }
+  
+  nav button {
+    flex: 1;
+    background: #c81ca3;
+    border-radius: 8px;
+  }
+  
+  nav button:hover {
+    background: #98a617;
+  }
+  
+  /* Halaman konten */
+  .page {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .page.active {
+    display: block;
+  }
+  
+  /* Teks kesalahan login */
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Halaman tersembunyi */
+  .hidden {
+    display: none;
+  }
+  
+  /* Animasi */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsif untuk layar kecil */
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px;
+    }
+  
+    nav {
+      flex-direction: column;
+    }
+  
+    nav button {
+      margin-bottom: 10px;
+    }
+    .product-img {
+        width: 100%;
+        max-width: 100px;
+        display: block;
+        margin: 20px auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
